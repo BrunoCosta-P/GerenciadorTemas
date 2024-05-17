@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Temas de Cores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gerenciador de Temas de Cores</h1>
+
+      <div id="lista-temas">
+        <h2>Lista de Temas</h2>
+        <input type="text" id="filtro-tema" placeholder="Pesquisar tema..." />
+        <ul class="temas"></ul>
+        <button id="btn-novo-tema">Novo Tema</button>
+      </div>
+
+      <div id="modal-edicao-tema" class="modal">
+        <div class="modal-content">
+          <div class="modal-header"><h2>Editar Tema</h2></div>
+
+          <form id="form-edicao-tema" class="form-edicao-tema">
+            <input type="hidden" id="id-tema" name="id" />
+            <label for="nome-tema">Nome do Tema:</label>
+            <input type="text" id="nome-tema" name="name" required />
+
+            <label for="cor-primaria">Cor Primária:</label>
+            <input type="color" id="cor-primaria" name="primary" required />
+
+            <label for="cor-secundaria">Cor Secundária:</label>
+            <input type="color" id="cor-secundaria" name="secondary" required />
+
+            <label for="cor-sucesso">Cor Sucesso:</label>
+            <input type="color" id="cor-sucesso" name="success" required />
+
+            <label for="cor-perigo">Cor Perigo:</label>
+            <input type="color" id="cor-perigo" name="danger" required />
+
+            <label for="cor-aviso">Cor Aviso:</label>
+            <input type="color" id="cor-aviso" name="warning" required />
+
+            <div class="container-button">
+              <button type="submit">Salvar</button>
+            <button type="button" id="btn-fechar-modal" onclick="fecharModalEdicao()">Fechar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
